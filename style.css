@@ -30,8 +30,10 @@ section.alternate-background {
   color: #fff;
 }
 
+/* - Write CSS for all images so that the images will match whatever container width they are placed within, and changing the container sizes will update the image sizes appropriately. */
 main img {
-  width: 100px;
+  padding: 10px 0px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -62,6 +64,17 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+/* - The logo should stack on top of the menu links, which are aligned horizontally, as follows: */
+header nav {
+  display: flex;
+  justify-content: center;
+}
+/* align links horizontally */
+header nav ul {
+  display: flex;
+  padding-left: 0;
 }
 
 header nav ul li {
@@ -95,6 +108,12 @@ form input {
   width: 180px;
 }
 
+/* - the labels (i.e., "Location", "Arrive", "Depart", "Type") and their corresponding form fields are aligned towards the opposite ends of each row */
+form div {
+  display: flex;
+  justify-content: space-around;
+}
+
 form button {
   background-color: #ff385c;
   border: none;
@@ -117,3 +136,44 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+/* - In `style.css`, create a media query for screens that are wider than `480px`.
+ */
+ /* For screens about 480px */
+@media all and (min-width: 480px) {
+  /* - The logo and the navigation menu links should be spaced apart from each other */
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .logo {
+    margin: 20px 0 15px 20px;
+    font-size: 48px;
+  }
+
+  header nav ul {
+    align-items: center;
+  }
+
+  /* - The search form input fields and the button should be horizontally aligned */
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
+    flex: 1;
+  }
+
+  /* The items in the "About" section should be horizontally aligned. The paragraph content should be vertically centered and always be about twice as wide as each image item */
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
+}
