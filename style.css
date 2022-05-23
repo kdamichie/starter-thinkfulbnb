@@ -177,3 +177,16 @@ footer p {
     align-items: center;
   }
 }
+
+@media all and (min-width: 500px) and (max-width: 1000px) {
+  form div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  form select, form input {
+    flex-wrap: wrap;
+    max-width: 130px;
+    justify-content: center;
+  }
+}
