@@ -167,26 +167,26 @@ footer p {
     flex-direction: column;
   }
 
+  form label {
+    align-self: flex-start;
+  }
+
+  form select,
+  form input,
   form button {
     flex: 1;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  main section div {
+    justify-content: center;
+    align-items: center;
   }
 
   /* The items in the "About" section should be horizontally aligned. The paragraph content should be vertically centered and always be about twice as wide as each image item */
   .group {
     flex-direction: row;
     align-items: center;
-  }
-}
-
-@media all and (min-width: 500px) and (max-width: 1000px) {
-  form div {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  form select, form input {
-    flex-wrap: wrap;
-    max-width: 130px;
-    justify-content: center;
   }
 }
