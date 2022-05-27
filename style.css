@@ -157,14 +157,25 @@ footer p {
   }
 
   /* - The search form input fields and the button should be horizontally aligned */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
   form {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   form div {
+    display: flex;
     flex-direction: column;
+    min-width: 0;
   }
 
   form label {
@@ -179,9 +190,15 @@ footer p {
     margin-bottom: 0px;
   }
 
+    form button {
+    font-size: 15px;
+    padding: 11px;
+  }
+
   main section div {
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 
   /* The items in the "About" section should be horizontally aligned. The paragraph content should be vertically centered and always be about twice as wide as each image item */
